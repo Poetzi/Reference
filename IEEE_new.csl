@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
+  <info>
+    <title>Chronological Minimal IEEE (No Location, Full Journal Names)</title>
+    <id>http://www.zotero.org/styles/chronological-minimal-ieee-no-location-full-journal-names</id>
+  </info>
+  <locale xml:lang="en">
+    <terms>
+      <term name="chapter" form="short">ch.</term>
+      <term name="presented at">presented at the</term>
+    </terms>
+  </locale>
+  <!-- Macros -->
+  <macro name="author">
+    <names variable="author">
+      <name and="text" et-al-min="7" et-al-use-first="1" initialize-with=". "/>
+    </names>
+  </macro>
+  <macro name="issued">
+    <date variable="issued">
+      <date-part name="year" form="long"/>
+    </date>
+  </macro>
+  <macro name="title">
+    <text variable="title" quotes="true"/>
+  </macro>
+  <macro name="journal">
+    <text variable="container-title" font-style="italic"/>
+  </macro>
+  <macro name="volume-issue-page">
+    <group delimiter=", ">
+      <group delimiter=" ">
+        <text term="vol."/>
+        <text variable="volume"/>
+      </group>
+      <group delimiter=" ">
+        <text term="no."/>
+        <text variable="issue"/>
+      </group>
+      <group delimiter=" ">
+        <text term="pp."/>
+        <text variable="page"/>
+      </group>
+    </group>
+  </macro>
+  <macro name="doi">
+    <group delimiter=" ">
+      <text variable="DOI" prefix="doi: "/>
+    </group>
+  </macro>
+  <!-- Citation -->
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="issued"/>
+      <key variable="citation-number"/>
+    </sort>
+    <layout delimiter=", ">
+      <group prefix="[" suffix="]" delimiter=", ">
+        <text variable="citation-number"/>
+      </group>
+    </layout>
+  </citation>
+  <!-- Bibliography -->
+  <bibliography entry-spacing="0" second-field-align="flush">
+    <sort>
+      <key variable="issued"/>
+      <key variable="citation-number"/>
+    </sort>
+    <layout suffix=".">
+      <text variable="citation-number" prefix="[" suffix="]"/>
+      <text macro="author" suffix=", "/>
+      <text macro="title" suffix=", "/>
+      <text macro="journal" suffix=", "/>
+      <text macro="volume-issue-page" suffix=", "/>
+      <text macro="issued" suffix=", "/>
+      <text macro="doi"/>
+    </layout>
+  </bibliography>
+</style>
