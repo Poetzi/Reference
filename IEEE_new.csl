@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
   <info>
-    <title>Chronological Minimal IEEE (No Location, Full Journal Names)</title>
-    <id>http://www.zotero.org/styles/chronological-minimal-ieee-no-location-full-journal-names</id>
+    <title>Chronological IEEE</title>
+    <id>http://www.mendeley.com/styles/chronological-ieee</id>
+    <updated>2024-08-24T00:00:00Z</updated>
   </info>
   <locale xml:lang="en">
     <terms>
